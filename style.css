@@ -7,7 +7,7 @@
 
 .container {
     max-width: 1280px;
-    margin: 20px 20px;
+    margin: 20px auto;
 }
 
 .block {
@@ -57,9 +57,43 @@ h2 {
 .navigation-list {
     list-style-type: none;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
 .navigation-list * {
     margin: 0 0 0 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller (max-width: 768px) */
+@media (max-width: 768px) {
+    .block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .avatar, .company-logo {
+        height: 50px;
+        width: 50px;
+    }
+    .block h2 {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .block, .innerblock {
+        padding: 5px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .navigation-list {
+        flex-direction: column;
+    }
+    .navigation-list * {
+        margin: 5px 0;
+    }
+    .container {
+        margin: 10px auto;
+    }
 }
